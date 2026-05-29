@@ -1,0 +1,82 @@
+/* ---------------------------- Configuração do menu ---------------------------- */
+
+.body_menu {
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    overflow: hidden;
+}
+
+.header_menu {
+    display: flex;
+    align-items: center; /* alinha verticalmente */
+    justify-content: center; /* centraliza tudo */
+    padding: 20px;
+    background-color: #010713;
+    position: relative; /* permite posicionar o logo */
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    width: 15%;
+}
+
+.navbar_menu {
+    display: flex;
+    gap: 50px; /* espaço entre os links */
+    z-index: 10; /* garante que o menu fica acima do logo */
+}
+
+.navbar_menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center; /* centraliza o texto dentro do link */
+}
+
+
+/* ---------------------------- Configuração geral ---------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #040A16;
+}
+
+.conteudo_index, .conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre  { /* background das páginas */
+    margin: 0px;
+    width:100%;
+    height:calc(100vh - 70px);
+    border:none;
+}
+
+.conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre  { /* background das páginas */
+    background-color: #040A16;
+}
+
+iframe {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------- Index ---------------------------- */
+
+
+/* ---------------------------- Emergência ---------------------------- */
+
+
+/* ---------------------------- Monitoramento ---------------------------- */
+
+
+/* ---------------------------- Sobre ---------------------------- */
+
+
+/* ---------------------------- Contato ---------------------------- */
