@@ -38,6 +38,78 @@
     text-align: center; /* centraliza o texto dentro do link */
 }
 
+.navbar_menu a:hover {
+    color: #17C3C3;
+}
+
+#menuButton {
+    position: absolute;
+    right: 40px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-menu {
+    background-color: transparent;
+    border: none;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-blue, .btn-red {
+    color: white;
+}
+
+.btn-blue {
+    background-color: #17C3C3;
+    border: 1px solid #17C3C3;
+}
+
+.btn-blue:hover {
+    background-color: #E11F28;
+    border-color: #E11F28;
+    color: white;
+}
+
+.btn-red {
+    background-color: #E11F28;
+    border: 1px solid #E11F28;
+}
+
+.btn-red:hover {
+    background-color: #460606;
+    border: 1px solid #460606;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    text-align: center;
+    border: none;
+}
+
+.avatar-status {
+    display: inline;
+    color: gray;
+    margin-right: 10px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.text-status {
+    display: inline;
+    line-height: 1;
+}
+
+.user-name {
+    color: white;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.user-function {
+    color: grey;
+    font-size: 10px;
+}
 
 /* ---------------------------- Configuração geral ---------------------------- */
 
@@ -50,10 +122,10 @@ body {
     background-color: #040A16;
 }
 
-.conteudo_index, .conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre  { /* background das páginas */
+.conteudo_index, .conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre { /* background das páginas */
     margin: 0px;
     width:100%;
-    height:calc(100vh - 70px);
+    height: auto;
     border:none;
 }
 
@@ -68,7 +140,109 @@ iframe {
 }
 
 /* ---------------------------- Index ---------------------------- */
+.conteudo_index {
+    background-image: url("../img/bkg_index.png");
+    background-repeat: no-repeat;      /* Evita repetição */
+    background-size: cover;            /* Ajusta para cobrir todo o elemento */
+    background-position: center;       /* Centraliza a imagem */
+    background-attachment: fixed;      /* Fixa a imagem no scroll */
+}
 
+.caixa_index {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 120px 50px auto;
+}
+
+.caixa_title_index {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px 60px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30); /* sombra difusa */
+}
+
+.title_A, .title_B {
+    color: white;
+    font-size: 40px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+}
+
+.title_A {
+    color: white;
+}
+
+.title_B {
+    color: #17C3C3;
+}
+
+.text_title {
+    margin: 30px 0;
+    color: white;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.botao_azul, .botao_transparente {
+    border-color: #17C3C3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+.botao_azul {
+    background-color: #17C3C3;
+    margin-right: 50px;
+}
+
+.botao_azul:hover, .botao_transparente:hover, .botao_azul a:hover, .botao_transparente a:hover {
+    background-color: #001538;
+    border-color: #001538;
+    color: white;
+}
+
+.botao_transparente {
+    background-color: transparent;
+}
+
+button a, #menuButton a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon_index {
+    color: #17C3C3;
+    font-size: 50px;   
+}
+
+.big_p_index, .little_p_index {
+    color: white
+}
+
+.big_p_index {
+    font-size: 30px;
+}
+
+.little_p_index {
+    font-size: 20px;
+}
+
+.group_box_line_index {
+    margin: 10px auto;
+    justify-content: center;
+    gap: 40px;
+}
+
+.box_line_index {
+    padding: 15px 20px 10px;
+    background-color: #111926;
+    margin-bottom: 20px;
+    border: 1px solid #17c3c319;
+    border-radius: 15px;
+}
+
+.box_line_index:hover {
+    background-color: #034646;
+}
 
 /* ---------------------------- Emergência ---------------------------- */
 
