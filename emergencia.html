@@ -16,6 +16,13 @@
     <header>
         <iframe src="menu.html" style="width:100%; height:70px; border:none;"></iframe>
     </header>
-    <iframe name="conteudo" class="conteudo_emergencia"></iframe>
+	<div class="conteudo conteudo_emergencia">
+	</div>
+	<script>
+		const iframe = document.querySelector("header iframe");
+		iframe.onload = () => {
+			iframe.contentWindow.postMessage({ color: "red" }, "*");
+		};
+	</script>
 </body>
 </html>

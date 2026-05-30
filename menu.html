@@ -24,6 +24,31 @@
             <a href="sobre.html" target="conteudo">Sobre</a>
             <a href="contato.html" target="conteudo">Contato</a>
         </nav>
+        <button id="menuButton" class="btn-menu"></button>
     </header>
+    <script>
+        window.addEventListener("message", function (event) {
+            const btn = document.getElementById("menuButton");
+
+            // Remove classes antigas
+            btn.classList.remove("btn-blue", "btn-red", "btn-menu");
+
+            // Aplica a nova cor enviada pela página
+            if (event.data.color === "blue") {
+                btn.classList.add("btn-blue");
+                btn.innerHTML = '<a href="emergencia.html" target="conteudo">&#128225;&nbsp; Solicitar Ajuda</a>';
+            }
+
+            if (event.data.color === "red") {
+                btn.classList.add("btn-red");
+                btn.innerHTML = '<a href="monitoramento.html" target="conteudo">&#9888; &nbsp; Acompanhar Emergência';
+            }
+
+            if (event.data.color === "transparent") {
+                btn.classList.add("btn-transparent");
+                btn.innerHTML = '<div class="user-box row"><div class="avatar-status col-md-1"><i class="bi bi-person-circle"></i></div><div class="text-status col-md-1"><span class="user-name mb-0">Central SATHELP</span><br><span class="user-function mb-0">Operador</span></div></div>';
+            }
+        });
+    </script>
 </body>
 </html>
