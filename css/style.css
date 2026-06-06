@@ -7,8 +7,31 @@
     overflow: hidden;
 }
 
-.header_menu {
+.header_menu, .navbar_menu {  /* display flex */
     display: flex;
+}
+
+.avatar-status, .text-status {  /* display inline */
+    display: inline;
+}
+
+.navbar_menu a, .btn-blue, .btn-red, .btn-blue:hover, .user-name {  /* fonte de cor branca */
+    color: white;
+}
+
+.avatar-status, .user-function {  /* fonte de cor cinza */
+    color: grey;
+}
+
+.navbar_menu a, .btn-transparent { /* centraliza o texto */
+    text-align: center; 
+}
+
+#menuButton, .btn-menu, .botao_enviar { /* Fonte-family google fonts */
+    font-family: "Inter", sans-serif;
+}
+
+.header_menu {
     align-items: center; /* alinha verticalmente */
     justify-content: center; /* centraliza tudo */
     padding: 20px;
@@ -26,16 +49,13 @@
 }
 
 .navbar_menu {
-    display: flex;
     gap: 50px; /* espaço entre os links */
     z-index: 10; /* garante que o menu fica acima do logo */
 }
 
 .navbar_menu a {
-    color: white;
     text-decoration: none;
     font-weight: 500;
-    text-align: center; /* centraliza o texto dentro do link */
 }
 
 .navbar_menu a:hover {
@@ -47,17 +67,11 @@
     right: 40px;
     padding: 5px 20px;
     border-radius: 10px;
-    font-family: "Inter", sans-serif;
 }
 
-.btn-menu {
+.btn-menu, .btn-transparent {
     background-color: transparent;
     border: none;
-    font-family: "Inter", sans-serif;
-}
-
-.btn-blue, .btn-red {
-    color: white;
 }
 
 .btn-blue {
@@ -65,13 +79,7 @@
     border: 1px solid #17C3C3;
 }
 
-.btn-blue:hover {
-    background-color: #E11F28;
-    border-color: #E11F28;
-    color: white;
-}
-
-.btn-red {
+.btn-blue:hover, .btn-red {
     background-color: #E11F28;
     border: 1px solid #E11F28;
 }
@@ -81,65 +89,96 @@
     border: 1px solid #460606;
 }
 
-.btn-transparent {
-    background-color: transparent;
-    text-align: center;
-    border: none;
-}
-
 .avatar-status {
-    display: inline;
-    color: gray;
     margin-right: 10px;
     font-size: 20px;
     align-self: center;
 }
 
 .text-status {
-    display: inline;
     line-height: 1;
 }
 
 .user-name {
-    color: white;
     font-size: 15px;
     white-space: nowrap;
 }
 
 .user-function {
-    color: grey;
     font-size: 10px;
 }
 
 /* ---------------------------- Configuração geral ---------------------------- */
 
-body {
+body, iframe {
     margin: 0;
     padding: 0;
+}
+
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #040A16;
+    overflow-x: hidden;
 }
 
 .conteudo_index, .conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre { /* background das páginas */
-    margin: 0px;
-    width:100%;
+    margin: 0 auto;
+    width: 100%;
     height: auto;
-    border:none;
+    border: none;
 }
 
-.conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre  { /* background das páginas */
+body, .conteudo_contato, .conteudo_emergencia, .conteudo_monitoramento, .conteudo_sobre  { /* background das páginas */
     background-color: #040A16;
+}
+
+.form-control, .form-check-input, .form-control:focus, .botao_enviar, .botao_enviar:hover {  /* fonte de cor branca */
+    color: white;
+}
+
+.p_footer, ::placeholder { /* fonte de tamanho 10px */
+    font-size: 10px;
 }
 
 iframe {
     display: block;
-    margin: 0;
-    padding: 0;
+}
+
+.p_footer {
+    text-align: center;
+    color: grey;
+}
+
+.form-control, .form-check-input {
+    background-color: #053a3a33;
+    border: none;
+    border: 1px solid #053a3a5f;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.botao_enviar {
+    border-color: #17C3C3;
+    background-color: rgba(23, 195, 195, 0.3);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.botao_enviar:hover {
+    background-color: #001538;
+    border-color: #001538;
+}
+
+.row {  /* !important para forçar o navegador a considerar o CSS e não o Bootstrap */
+    margin-left: 0 !important; 
+    margin-right: 0 !important;
 }
 
 /* ---------------------------- Index ---------------------------- */
+
 .conteudo_index {
     background-image: url("../img/bkg_index.png");
     background-repeat: no-repeat;      /* Evita repetição */
@@ -161,43 +200,50 @@ iframe {
 }
 
 .title_A, .title_B {
-    color: white;
-    font-size: 40px;
+    font-size: 43px;
     font-family: "Exo 2", sans-serif;
     font-weight: bold;
 }
 
-.title_A {
+.title_A, .text_title, .botao_azul:hover, .botao_transparente:hover, .botao_azul a:hover, .botao_transparente a:hover, button a, #menuButton a, .big_p_index, .little_p_index { /* */
     color: white;
 }
 
-.title_B {
+.title_B, .icon_index { /* */
     color: #17C3C3;
+}
+
+.text_title, .botao_azul, .botao_transparente { /* Fonte-family google fonts */
+    font-family: "Inter", sans-serif;
+}
+
+.little_p_index { 
+    font-size: 15px;
 }
 
 .text_title {
     margin: 30px 0;
-    color: white;
     font-size: 20px;
-    font-family: "Inter", sans-serif;
 }
 
 .botao_azul, .botao_transparente {
     border-color: #17C3C3;
     padding: 10px 15px;
-    border-radius: 5px;
-    font-family: "Inter", sans-serif;
+    border-radius: 10px;
+    font-size: 13px;
 }
 
 .botao_azul {
     background-color: #17C3C3;
-    margin-right: 50px;
+}
+
+.botao_espaco {
+    margin-right: 10px;
 }
 
 .botao_azul:hover, .botao_transparente:hover, .botao_azul a:hover, .botao_transparente a:hover {
     background-color: #001538;
     border-color: #001538;
-    color: white;
 }
 
 .botao_transparente {
@@ -206,30 +252,20 @@ iframe {
 
 button a, #menuButton a {
     text-decoration: none;
-    color: white;
 }
 
 .icon_index {
-    color: #17C3C3;
     font-size: 50px;   
-}
-
-.big_p_index, .little_p_index {
-    color: white
 }
 
 .big_p_index {
     font-size: 30px;
 }
 
-.little_p_index {
-    font-size: 20px;
-}
-
 .group_box_line_index {
     margin: 10px auto;
     justify-content: center;
-    gap: 40px;
+    gap:95px;
 }
 
 .box_line_index {
@@ -244,13 +280,605 @@ button a, #menuButton a {
     background-color: #034646;
 }
 
+/* ---------------------------- Sobre ---------------------------- */
+
+.container_sobre {
+    padding: 40px;
+    background-color: #111926;
+    margin: 50px 80px 0;
+    border: 1px solid #17c3c319;
+    border-radius: 15px;
+}
+
+h6 {
+    color: #17C3C3;
+    font-size: 18px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+}
+
+.box_sobre, .text_sobre {
+    font-size: 15px;
+}
+
+.text_sobre {
+    text-align: justify;
+}
+
+.text_sobre, .p_sobre {
+    color: white;
+}
+
+.box_sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon_circle, .icon_circle_warning {
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    height: 100%; /* garante alinhamento com o texto ao lado */
+    width: 80px;              /* tamanho do círculo */
+    height: 80px;
+    border-radius: 50%;       /* transforma em círculo */
+    margin: 0 auto;           
+}
+
+.icon_circle {
+    background-color: rgba(128, 128, 128, 0.04);
+}
+
+.icon_circle_warning {
+    background-color: rgba(176, 110, 24, 0.04);
+}
+
+.icon_lateral {
+    font-size: 40px;
+}
+
+.icon_sobre, .icon_lateral {
+    font-size: 35px;
+    color: #92c7c794;
+}
+
+.icon_sobre_warning {
+    font-size: 35px;
+    color: #B06E18;
+}
+
+.container_img {
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.img_sobre {
+    margin-right: 15px;
+}
+
+.line_h_sobre {
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.line_v_sobre {
+    border-right: 1px solid rgba(128, 128, 128, 0.15);
+}
+
 /* ---------------------------- Emergência ---------------------------- */
 
+.dashboard_emergencia {  /* !important para forçar o navegador a considerar o CSS e não o Bootstrap */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 10px;
+}
+
+.dashboard_emergencia, .box_title_emergencia, .icon_emergencia_red, .icon_bombeiros, .box_sintomas, .card_sintoma { /* Display flex*/
+    display: flex;
+}
+
+.dashboard_emergencia, .box_sintomas {  /* Flex-wrap */
+    flex-wrap: wrap;
+}
+
+.dashboard_emergencia, .line_title_emergencia, .box_title_emergencia, .icon_emergencia_red, .icon_bombeiros, .card_sintoma { /* Justify-content center - centraliza horizontalmente */
+    justify-content: center;
+}
+
+.card_sintoma, .icons_satelite_emergencia, .status_satelite_emergencia { /* Text align center*/
+    text-align: center;
+}
+
+.title_emergencia, .p_emergencia, .status_importante_emergencia, .botao_gps:hover, .card_sintoma, .box_nivel_dor, .botao_enviar_ajuda, .botao_enviar_ajuda:hover, .status_satelite_emergencia { /* fonte de cor branca */
+    color: white;
+}
+
+.title_form_emergencia, .title_satelite_emergencia, .botao_gps, .card_sintoma:has(input:checked):hover, .big_icon_azul { /* fonte de cor azul */
+    color: #17C3C3;
+}
+
+.title_importante_emergencia, .info_bombeiros, .icon_emergencia_red, .icon_bombeiros { /* fonte de cor vermelha */
+    color: red;
+}
+
+.titulo_label_emergencia, .p_form_emergencia, .dor-texto, .icon_claro {
+    color: grey;
+}
+
+.title_emergencia, .botao_gps, .box_nivel_dor, .botao_enviar_ajuda { /* Fonte-family google fonts */
+    font-family: "Inter", sans-serif;
+}
+
+.dados_emergencia, .satelite_emergencia, .importante_emergencia, .info_bombeiros, .botao_gps, .card_sintoma, .botao_enviar_ajuda { /* Curvatura de borda 10px */
+    border-radius: 10px;
+}
+
+.title_emergencia, .title_form_emergencia , .titulo_label_emergencia, .title_satelite_emergencia, .title_importante_emergencia {
+    font-weight: bold;
+}
+
+.line_title_emergencia, input[type="range"] {
+    margin: 20px 0;
+}
+
+.box_title_emergencia, .card_sintoma { /* Flex column */
+    flex-direction: column;
+}
+
+.icon_emergencia_red, .icon_bombeiros {
+    align-items: center;   /* alinha verticalmente */ 
+    margin: 0 auto; 
+}
+
+.icon_bombeiros {
+    height: 100%; /* garante alinhamento com o texto ao lado */
+}
+
+.box_nivel_dor, input[type="range"], .botao_enviar_ajuda {
+    width: 100%;
+}
+
+.icon_emergencia_red { 
+    font-size: 40px;
+}
+
+.title_emergencia {
+    font-size: 25px;
+}
+
+.p_emergencia, .titulo_label_emergencia, .p_form_emergencia, .dor-texto { /* Tamanho de fonte 10px */
+    font-size: 10px;
+}
+
+.botao_gps, .card_sintoma, .info_bombeiros  { /* Tamanho de fonte 12px */
+    font-size: 12px;
+}
+
+.bi-placeholder::placeholder {          /* colocar icon no placeholder */
+    font-family: "bootstrap-icons";
+}
+
+.dados_emergencia .row > [class*="col-"] {
+    flex: 1;
+}
+
+.dados_emergencia, .satelite_emergencia, .importante_emergencia {
+    padding: 30px;
+    margin: 30px;
+}
+
+.info_bombeiros {
+    padding: 10px;
+}
+
+.dados_emergencia, .satelite_emergencia {
+    background-color: rgba(5, 13, 35, 0.4);
+    border: 1px solid rgba(5, 13, 35, 0.9);
+}
+
+.importante_emergencia, .info_bombeiros {
+    background-color: rgb(105, 24, 31, 0.2);
+    border: 1px solid rgb(105, 24, 31, 0.5);
+}
+
+.title_form_emergencia , .titulo_label_emergencia, .title_satelite_emergencia, .title_importante_emergencia {
+    font-family: "Exo 2", sans-serif;
+}
+
+.title_form_emergencia, .title_satelite_emergencia, .title_importante_emergencia, .status_importante_emergencia {
+    font-size: 15px;
+}
+
+.title_section_form {
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    margin-top: 30px;
+}
+
+.botao_gps {
+    border-color: #17C3C3;
+    background-color: rgba(23, 195, 195, 0.3);
+    padding: 6px 10px;
+}
+
+.botao_gps:hover {
+    background-color: #001538;
+    border-color: #001538;
+}
+
+.container_botao_gps {
+    align-content: end;
+}
+
+.box_sintomas {
+    gap: 5px;
+}
+
+.line_dados {
+    margin-bottom: 5px;
+}
+
+.card_sintoma {
+    background: rgba(5, 58, 58, 0.2);
+    border: 1px solid #053a3a5f;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.card_sintoma:hover {
+    background-color: #001538;
+}
+
+.card_sintoma:has(input:checked) {
+    background-color: rgba(23, 195, 195, 0.4);
+}
+
+.card_sintoma input {
+    display: none;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;  /* Desabilitar a personalização padrão do item */
+    background: linear-gradient(to right, #2ecc71, #f39c12, #e74c3c);
+    height: 10px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {    /* Estilização da bolinha que fica no range */
+    background-color: white;
+    -webkit-appearance: none;  /* Desabilitar a personalização padrão do item */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #040A16;
+}
+
+.dor-texto {
+    text-align: end;
+}
+
+.botao_enviar_ajuda {
+    margin-top: 20px;
+    border-color: #17C3C3;
+    background-color: rgba(23, 195, 195, 0.3);
+    padding: 10px 15px;
+}
+
+.botao_enviar_ajuda:hover {
+    background-color: #001538;
+    border-color: #001538;
+}
+
+.icons_satelite_emergencia {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.big_icon_azul {
+    margin-right: 50px;
+}
+
+.big_icon_verde {
+    color: #03B79C;
+}
+
+.icon_verde {
+    color: #077C3D;
+}
+
+.spinner-border {
+    color: #b06e186f;
+}
+
+.status_satelite_emergencia {
+    font-size: 14px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
 
 /* ---------------------------- Monitoramento ---------------------------- */
 
+.dashboard_monitoramento {  /* !important para forçar o navegador a considerar o CSS e não o Bootstrap */
+    margin: 0 40px;
+}
 
-/* ---------------------------- Sobre ---------------------------- */
+.line_title_monitoramento, .box_title_monitoramento, .icon_card_azul_monitoramento, .icon_card_vermelho_monitoramento, .icon_card_verde_monitoramento, .icon_card_amarelo_monitoramento, .seta_table_monitoramento, .table_monitoramento, .line_divisao_casos, .icon_table_monitoramento_vermelho, .icon_table_monitoramento_verde, .icon_table_monitoramento_amarelo { /* Justify-content center - centraliza horizontalmente */
+    justify-content: center;
+}
 
+.box_title_monitoramento, .legenda_map, .map_ocorrencia, .icon_card_azul_monitoramento, .icon_card_vermelho_monitoramento, .icon_card_verde_monitoramento, .icon_card_amarelo_monitoramento, .seta_table_monitoramento, .table_monitoramento, .icon_table_monitoramento_vermelho, .icon_table_monitoramento_verde, .icon_table_monitoramento_amarelo, .box_card { /* Display flex*/
+    display: flex;
+}
+
+.legenda_map {
+    margin-top: auto;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.box_title_monitoramento, .map_ocorrencia, .icon_card_azul_monitoramento, .icon_card_vermelho_monitoramento, .icon_card_verde_monitoramento, .icon_card_amarelo_monitoramento, .seta_table_monitoramento, .table_monitoramento, .icon_table_monitoramento_vermelho, .icon_table_monitoramento_verde, .icon_table_monitoramento_amarelo { /* Flex column */
+    flex-direction: column;
+}
+
+.icon_monitoramento, .icon_align, .icon_card_azul_monitoramento, .icon_card_vermelho_monitoramento, .icon_card_verde_monitoramento, .icon_card_amarelo_monitoramento, .box_card {
+    align-items: center;   /* alinha verticalmente */ 
+    margin: 0 auto; 
+}
+
+.icon_monitoramento, .title_monitoramento, .p_monitoramento, .numero_card_azul_monitoramento, .numero_card_vermelho_monitoramento, .numero_card_amarelo_monitoramento, .numero_card_verde_monitoramento, .info_card_azul_monitoramento, .info_card_vermelho_monitoramento, .info_card_amarelo_monitoramento, .info_card_verde_monitoramento, .case_table_monitoramento, .tipo_table_monitoramento, .gravidade_table_monitoramento, .time_table_monitoramento, .estado_table_monitoramento_vermelho, .estado_table_monitoramento_verde, .estado_table_monitoramento_amarelo, .seta_table_monitoramento, .p_mapa { /* texto na cor branca*/
+    color: white;
+}
+
+.title_card_azul_monitoramento, .p_card_azul_monitoramento, .icon_card_azul_monitoramento { /* texto na cor azul*/
+    color: #17C3C3;
+}
+
+.line_map_monitoramento, .map_ocorrencia, .card_azul_monitoramento, .card_vermelho_monitoramento, .card_amarelo_monitoramento, .card_verde_monitoramento, .table_border {
+    border-radius: 10px;
+}
+
+.line_map_monitoramento {
+    margin: 5px;
+}
+
+.card_azul_monitoramento, .card_vermelho_monitoramento, .card_amarelo_monitoramento, .card_verde_monitoramento {
+    padding: 15px;
+}
+
+.card_espaco {
+    flex: 0 0 calc(25% - 20px);   /* 25% menos a margem */
+    max-width: calc(25% - 20px);
+    margin-right: 20px;
+}
+
+.card_azul_monitoramento {
+    background-color: rgba(23, 195, 195, 0.1);
+    border: 1px solid rgba(23, 195, 195, 0.5);
+}
+
+.line_map_monitoramento {
+    background-color: rgba(9, 17, 30, 0.8);
+    border: 1px solid rgba(4, 10, 22, 0.9);
+}
+
+.title_card_verde_monitoramento, .p_card_verde_monitoramento, .icon_card_verde_monitoramento, .icon_table_monitoramento_verde, .circle_verde { /* texto na cor verde*/
+    color: #2E6E3B;
+}
+
+.card_verde_monitoramento {
+    background-color: rgba(32, 87, 51, 0.1);
+    border: 1px solid rgba(32, 87, 51, 0.5);
+}
+
+.estado_table_monitoramento_verde {
+    background-color: rgba(32, 87, 51, 0.08);
+    border: 1px solid rgba(32, 87, 51, 0.1);
+}
+
+.title_card_vermelho_monitoramento, .p_card_vermelho_monitoramento, .icon_card_vermelho_monitoramento, .icon_table_monitoramento_vermelho, .circle_vermelho { /* texto na cor vermelha*/
+    color: red;
+}
+
+.card_vermelho_monitoramento {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.estado_table_monitoramento_vermelho {
+    background-color: rgba(255, 0, 0, 0.08);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.estado_table_monitoramento_vermelho, .estado_table_monitoramento_verde, .estado_table_monitoramento_amarelo, .p_end, .time_table_monitoramento {
+    text-align: end;
+}
+
+.time_table_monitoramento {
+    margin-right: 15px;
+}
+
+.estado_table_monitoramento_vermelho, .estado_table_monitoramento_verde, .estado_table_monitoramento_amarelo, .p_mapa {
+    border-radius: 5px;
+    padding: 3px 15px;
+}
+
+.title_card_amarelo_monitoramento, .p_card_amarelo_monitoramento, .icon_card_amarelo_monitoramento, .icon_table_monitoramento_amarelo, .circle_amarelo { /* texto na cor amarela*/
+    color: #B06E18;
+}
+
+.card_amarelo_monitoramento {
+    background-color: rgba(176, 110, 24, 0.1);
+    border: 1px solid rgba(176, 110, 24, 0.5);
+}
+
+.estado_table_monitoramento_amarelo {
+    background-color: rgba(176, 110, 24, 0.08);
+    border: 1px solid rgba(176, 110, 24, 0.1);
+}
+
+.p_mapa, .table_border {
+    background-color: rgba(4, 10, 22, 0.6);
+    border: 1px solid rgba(4, 10, 22, 0.8);
+}
+
+.icon_monitoramento, .icon_card_azul_monitoramento, .icon_card_vermelho_monitoramento, .icon_card_verde_monitoramento, .icon_card_amarelo_monitoramento { 
+    font-size: 40px;
+}
+
+.p_monitoramento, .p_mapa { /* Tamanho de fonte 10px */
+    font-size: 10px;
+}
+
+.title_monitoramento, .title_card_azul_monitoramento, .title_card_vermelho_monitoramento, .title_card_verde_monitoramento, .title_card_amarelo_monitoramento, .p_card_azul_monitoramento, .p_card_vermelho_monitoramento, .p_card_verde_monitoramento, .p_card_amarelo_monitoramento, .numero_card_azul_monitoramento, .numero_card_vermelho_monitoramento, .numero_card_verde_monitoramento, .numero_card_amarelo_monitoramento, .info_card_azul_monitoramento, .info_card_vermelho_monitoramento, .info_card_amarelo_monitoramento, .info_card_verde_monitoramento { /* Fonte-family google fonts */
+    font-weight: bold;
+}
+
+.p_card_azul_monitoramento, .p_card_vermelho_monitoramento, .p_card_verde_monitoramento, .p_card_amarelo_monitoramento, .estado_table_monitoramento_vermelho, .estado_table_monitoramento_verde, .estado_table_monitoramento_amarelo, .time_table_monitoramento, .case_table_monitoramento, .tipo_table_monitoramento, .gravidade_table_monitoramento { /* Tamanho de fonte 12px */
+    font-size: 12px;
+}
+
+.title_monitoramento, .icon_table_monitoramento_vermelho, .icon_table_monitoramento_verde, .icon_table_monitoramento_amarelo {  /* Tamanho de fonte 25px */ 
+    font-size: 25px;
+}
+
+.info_card_azul_monitoramento, .info_card_vermelho_monitoramento, .info_card_amarelo_monitoramento, .info_card_verde_monitoramento {  /* Tamanho de fonte 20px */ 
+    font-size: 20px;
+}
+
+.title_card_azul_monitoramento, .title_card_vermelho_monitoramento, .title_card_verde_monitoramento, .title_card_amarelo_monitoramento { /* Tamanho de fonte 15px */
+    font-size: 15px;
+}
+
+.title_monitoramento, .title_card_azul_monitoramento, .title_card_vermelho_monitoramento, .title_card_verde_monitoramento, .title_card_amarelo_monitoramento { /* Fonte-family google fonts */
+    font-family: "Inter", sans-serif;
+}
+
+.numero_card_azul_monitoramento, .numero_card_vermelho_monitoramento, .numero_card_verde_monitoramento, .numero_card_amarelo_monitoramento { /* Fonte-family google fonts */
+    font-family: "Exo 2", sans-serif;
+    font-size: 40px;
+}
+
+.line_title_monitoramento {
+    margin: 20px 0;
+}
+
+.table_map {
+    padding: 0 30px 20px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: conic-gradient(#2E6E3B 98%, transparent); /* parte preenchida */
+  mask: radial-gradient(circle, transparent 40%, black 61%); /* deixa o centro vazio */
+}
+
+.map_ocorrencia {
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;      /* Evita repetição */
+    background-size: 100%;
+    background-position: center;       /* Centraliza a imagem */
+}
+
+.line_divisao_casos {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+.table_border {
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    padding: 10px 20px;
+}
+
+.card_azul_monitoramento:hover, .card_vermelho_monitoramento:hover, .card_amarelo_monitoramento:hover, .card_verde_monitoramento:hover {
+    background-color: transparent;
+}
+
+.case_registro:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
 /* ---------------------------- Contato ---------------------------- */
+
+.title_contato, .form-check-label, .cont_caracteres, .p_title_contato {
+    color: white;
+}
+
+.icon_contato, .titulo_label_contato {
+    color: #17C3C3;
+}
+
+.title_contato, .titulo_label_contato {
+    font-weight: bold;
+}
+
+.title_contato {
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+}
+
+.p_title_contato, .cont_caracteres {
+    font-size: 10px;
+}
+
+.icon_contato, .line_title_contato, .box_title_contato, .container_contato, .container_botao_contato {
+    display: flex;
+}
+
+.icon_contato, .line_title_contato, .box_title_contato { /* centraliza horizontalmente */
+    justify-content: center; 
+}
+
+.icon_contato, .container_contato { /* alinha verticalmente */
+    align-items: center;     
+}
+
+.icon_contato {
+    font-size: 40px;
+    height: 100%; /* garante alinhamento com o texto ao lado */
+    margin: 0 auto;  
+}
+
+.line_title_contato {
+    margin: 20px 0;
+}
+
+.box_title_contato, .container_contato {
+    flex-direction: column;
+}
+
+.container_contato {
+    padding: 10px 0;
+}
+
+.forms_contato {
+    width: 100%;
+    max-width: 700px;         /* largura máxima do formulário */
+}
+
+.my_forms_contato {
+    margin-top: 2px;
+}
+
+.titulo_label_contato {
+    font-size: 15px;
+}
+
+.container_botao_contato {
+    justify-content: flex-end;
+}
+
+.cont_caracteres {
+    text-align: end;
+    margin-top: 10px;
+}

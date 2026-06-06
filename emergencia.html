@@ -17,12 +17,203 @@
         <iframe src="menu.html" style="width:100%; height:70px; border:none;"></iframe>
     </header>
 	<div class="conteudo conteudo_emergencia">
+		<div class="line_title_emergencia row">
+			<div class="box_title_emergencia col-md-1">
+				<i class="bi bi-exclamation-triangle icon_emergencia_red"></i>
+			</div>
+			<div class="box_title_emergencia col-md-3">
+				<h1 class="title_emergencia mb-0">SOLICITAR AJUDA</h1>
+				<p class="p_emergencia mb-0">Conexão via satélite ativa &nbsp; &#x25CF; &nbsp; Sistema de emergência</p>
+			</div>
+		</div>
+		<div class="dashboard_emergencia row">
+			<div class="dados_emergencia col-md-7">
+				<form id="formulario_JS_emergencia" class="forms_emergencia">
+					<div class="row g-4">
+						<h2 class="title_form_emergencia">1. INFORME SEUS DADOS</h2>
+					</div>
+					<div class="line_dados row g-4">
+						<div class="col-md-6">
+							<label for="validationDefault01" class="form-label titulo_label_emergencia">Nome Completo</label>
+							<input type="text" class="form-control" id="nomecompleto" required
+								pattern="^[A-Za-zÀ-ÿ]+(?:\s+[A-Za-zÀ-ÿ]+)+$" title="Digite o nome e sobrenome" placeholder="Digite o seu nome">
+						</div>
+						<div class="col-md-6">
+							<label for="validationDefault01" class="form-label titulo_label_emergencia">Idade</label>
+							<input type="number" class="form-control" id="idade" required title="Digite a sua idade" placeholder="Digite a sua idade">
+						</div>
+					</div>
+					<div class="line_dados row g-4">
+						<div class="col-md-6">
+							<label for="exampleFormControlInput1" class="form-label titulo_label_emergencia">E-mail</label>
+							<input type="email" class="form-control" id="email" placeholder="name@example.com" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Digite o email no formato nome@example.com">
+						</div>
+						<div class="col-md-6">
+							<label for="Telefone" class="form-label titulo_label_emergencia">Número de Celular</label>
+							<input type="tel" class="form-control" id="telefone" placeholder="(99) 99999-9999" maxlength="15" required pattern="^\(\d{2}\)\s\d{4,5}-\d{4}$" title="Digite o ddd e o número de telefone completo">
+							<script>
+								/* Responsável por validar o conteúdo preenchido */
+								document.getElementById('telefone').addEventListener('input', function (e) {
+									let value = e.target.value.replace(/\D/g, '');
+									value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+									value = value.replace(/(\d{5})(\d)/, '$1-$2');
+									e.target.value = value;
+								});
+							</script>
+						</div>
+					</div>
+					<div class="row g-4">
+						<div class="col-md-6">
+							<label for="validationDefault01" class="form-label titulo_label_emergencia">Localização atual</label>
+							<input type="text" class="form-control bi-placeholder" id="localização" required title="Informe a sua localização ou utilize o GPS" placeholder="&#xF3E8; &nbsp; Toque para informar a sua localização">
+						</div>
+						<div class="container_botao_gps col-md-6">
+							<button type="button" id="button_botao" class="botao_gps"><i class="bi bi-globe2"></i> &nbsp; Usar GPS</button>
+						</div>
+					</div>					
+					<div class="title_section_form row g-4">
+						<h2 class="title_form_emergencia mb-0">2. DESCREVA SEUS SINTOMAS</h2>
+						<p class="p_form_emergencia mb-3 mt-3">Selecione seus sintomas principais:</p>
+					</div>
+					<div class="row g-4">
+						<div class="box_sintomas col-md-8">
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="febre">
+								<p class="text_sintomas mb-0"><i class="bi bi-thermometer-half"></i>&nbsp; Febre</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="dor_cabeca">
+								<p class="text_sintomas mb-0"><i class="bi bi-emoji-dizzy"></i>&nbsp; Dor de cabeça</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="tosse">
+								<p class="text_sintomas mb-0"><i class="bi bi-wind"></i> &nbsp;Tosse</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="falta_ar">
+								<p class="text_sintomas mb-0"><i class="bi bi-lungs"></i> &nbsp;Falta de ar</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="dor_peito">
+								<p class="text_sintomas mb-0"><i class="bi bi-heart-pulse"></i> &nbsp;Dor no peito</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="nausea">
+								<p class="text_sintomas mb-0"><i class="bi bi-emoji-expressionless"></i> &nbsp;Náusea</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="vomito">
+								<p class="text_sintomas mb-0"><i class="bi bi-emoji-frown"></i> &nbsp;Vômito</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="tontura">
+								<p class="text_sintomas mb-0"><i class="bi bi-arrow-repeat"></i> &nbsp;Tontura</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="sangramento_intenso">
+								<p class="text_sintomas mb-0"><i class="bi bi-droplet-fill"></i> &nbsp;Sangramento intenso</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="sangramento_leve">
+								<p class="text_sintomas mb-0"><i class="bi bi-droplet"></i> &nbsp;Sangramento leve</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="convulsao">
+								<p class="text_sintomas mb-0"><i class="bi bi-exclamation-circle"></i> &nbsp;Convulsão</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="alergica">
+								<p class="text_sintomas mb-0"><i class="bi bi-bug"></i> &nbsp;Reação alérgica</p>
+							</label>
+							<label class="card_sintoma">
+								<input type="checkbox" name="sintomas" value="outro">
+								<p class="text_sintomas mb-0"><i class="bi bi-person"></i> &nbsp; Outro</p>
+							</label>
+						</div>
+					</div>
+					<div class="row g-4">
+						<div class="box_nivel_dor col-md-8">
+							<p class="p_form_emergencia mb-0 mt-4">Nível da dor / desconforto:</p>
+							<input type="range" min="0" max="10" value="0" id="rangeDor">
+							<p class="dor-texto mt-0 mb-0" id="dorTexto">Nível de dor: 0 - Classificação: Sem dor</p>
+						</div>
+					</div>
+					<div class="row g-4">
+						<div class="container-botao col-md-8">
+							<button type="submit" id="submit_botao" class="botao_enviar_ajuda"><i class="bi bi-send"></i>&nbsp; Enviar pedido de ajuda</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="info_emergencia col-md-4">
+				<div class="satelite_emergencia">
+					<h2 class="title_satelite_emergencia">CONEXÃO VIA SATÉLITE</h2>
+					<div class="icons_satelite_emergencia">
+						<i class="bi bi-globe2 big_icon_azul"></i>
+						<i class="bi bi-reception-3 big_icon_verde"></i>
+					</div>
+					<p class="status_satelite_emergencia">Conectando ao satélite ...</p>
+					<p class="status_importante_emergencia"><i class="bi bi-check-circle-fill icon_verde"></i> &nbsp;Buscando sinal</p>
+					<p class="status_importante_emergencia"><i class="bi bi-check-circle-fill icon_verde"></i> &nbsp;Sinal encontrado</p>
+					<p class="status_importante_emergencia"><i class="bi bi-check-circle-fill icon_verde"></i> &nbsp;Estabilizando conexão &nbsp; &nbsp; &nbsp;<i class="spinner-border spinner-border-sm"></i></p>
+					<p class="status_importante_emergencia"><i class="bi bi-circle icon_claro"></i> &nbsp;Conexão estabelecida</p>
+				</div>
+				<div class="importante_emergencia">
+					<h2 class="title_importante_emergencia">IMPORTANTE</h2>
+					<p class="status_importante_emergencia">Mantenha-se em local aberto para melhor recepão do sinal via satélite.</p>
+					<div class="info_bombeiros row">
+						<div class="col-md-1">
+							<i class="bi bi-exclamation-triangle icon_bombeiros"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="mb-0">Em caso de emergência grave,<br>ligue 193 (Corpo de Bombeiro)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>
+		/* Responsável por trocar a cor e texto do botão que aparece no cabeçalho */
 		const iframe = document.querySelector("header iframe");
 		iframe.onload = () => {
 			iframe.contentWindow.postMessage({ color: "red" }, "*");
 		};
 	</script>
+	<script>
+		/* Responsável por emitir uma mensagem ao enviar o formulário */
+		document.getElementById("formulario_JS_emergencia").addEventListener("submit", function (e) {
+			e.preventDefault();
+			const sintomas = document.querySelectorAll('input[name="sintomas"]:checked');
+			if (sintomas.length === 0) {
+				alert("Selecione pelo menos um sintoma antes de enviar.");
+				return;
+			}
+			alert("Chamado registrado com sucesso! Em breve a sua ajuda chegará.");
+			this.reset();
+			const dorTexto = document.getElementById("dorTexto");
+			if (dorTexto) {
+				dorTexto.textContent = "Nível de dor: 0 - Classificação: Sem dor";
+			}
+		});
+	</script>
+	<script>
+		/* Responsável por mudar o texto do range de dor */
+		const range = document.getElementById("rangeDor");
+		const text = document.getElementById("dorTexto");
+
+		range.addEventListener("input", () => {
+			const v = Number(range.value);
+			let nivel = "";
+			if (v == 0) nivel = "Sem dor";
+			else if (v <= 3) nivel = "Leve";
+			else if (v <= 7) nivel = "Moderado";
+			else nivel = "Intenso";
+			text.textContent = `Nível de dor: ${v} - Classificação: ${nivel}`;
+		});
+	</script>
+	<footer>
+		<p class="p_footer">&#x00A9; &nbsp; 2026 - SATHELP &#x25CF; Conectando vidas quando mais importa &#128225;</p>
+	</footer>
 </body>
 </html>

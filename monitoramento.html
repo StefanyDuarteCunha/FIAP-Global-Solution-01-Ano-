@@ -17,12 +17,216 @@
         <iframe src="menu.html" style="width:100%; height:70px; border:none;"></iframe>
     </header>
 	<div class="conteudo conteudo_monitoramento">
+		<div class="dashboard_monitoramento">
+			<div class="line_title_monitoramento row">
+				<div class="box_title_monitoramento col-md-1">
+					<i class="bi bi-display icon_monitoramento"></i>
+				</div>
+				<div class="box_title_monitoramento col-md-4">
+					<h1 class="title_monitoramento mb-0">PAINEL DE MONITORAMENTO</h1>
+					<p class="p_monitoramento mb-0">Centro de operações em tempo real</p>
+				</div>
+			</div>
+			<div class="line_totalizador_monitoramento row gx-3 mb-4">
+				<div class="card_azul_monitoramento card_espaco col-md-3">
+					<h2 class="title_card_azul_monitoramento">TOTAL DE PEDIDOS</h2>
+					<div class="box_card row">
+						<div class="icon_card_azul_monitoramento col-md-3">
+							<i class="bi bi-card-text icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="numero_card_azul_monitoramento mb-0 mt-0">128</p>
+							<p class="p_card_azul_monitoramento mb-0 mt-0">+18 nas últimas 24 horas</p>
+						</div>
+					</div>
+				</div>
+				<div class="card_vermelho_monitoramento card_espaco col-md-3">
+					<h2 class="title_card_vermelho_monitoramento">CASOS GRAVES</h2>
+					<div class="box_card row">
+						<div class="icon_card_vermelho_monitoramento col-md-3">
+							<i class="bi bi-x-octagon icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="numero_card_vermelho_monitoramento mb-0 mt-0">32</p>
+							<p class="p_card_vermelho_monitoramento mb-0 mt-0">Prioridades máximas</p>
+						</div>
+					</div>
+				</div>
+				<div class="card_amarelo_monitoramento card_espaco col-md-3">
+					<h2 class="title_card_amarelo_monitoramento">EM ATENDIMENTO</h2>
+					<div class="box_card row">
+						<div class="icon_card_amarelo_monitoramento col-md-3">
+							<i class="bi bi-people icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="numero_card_amarelo_monitoramento mb-0 mt-0">74</p>
+							<p class="p_card_amarelo_monitoramento mb-0 mt-0">Equipes mobilizadas</p>
+						</div>
+					</div>
+				</div>
+				<div class="card_verde_monitoramento col-md-3">
+					<h2 class="title_card_verde_monitoramento">RESOLVIDOS</h2>
+					<div class="box_card row">
+						<div class="icon_card_verde_monitoramento col-md-3">
+							<i class="bi bi-check2-circle icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="numero_card_verde_monitoramento mb-0 mt-0">22</p>
+							<p class="p_card_verde_monitoramento mb-0 mt-0">+8 nas últimas 24 horas</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line_map_monitoramento row mb-4">
+				<div class="map_ocorrencia col-md-6">
+					<h2 class="title_card_azul_monitoramento title_map mt-3"><i class="bi bi-pin-map-fill"></i> &nbsp; MAPA DE OCORRÊNCIAS</h2>
+					<div class="legenda_map">
+						<p class="p_mapa d-md-inline mb-0 mt-0"><i class="bi bi-circle-fill circle_vermelho"></i>&nbsp; Crítico</p>
+						<p class="p_mapa d-md-inline mb-0 mt-0"><i class="bi bi-circle-fill circle_amarelo"></i>&nbsp; Moderado</p>
+						<p class="p_mapa d-md-inline mb-0 mt-0"><i class="bi bi-circle-fill circle_verde"></i>&nbsp; Leve</p>
+					</div>
+				</div>
+				<div class="table_map col-md-6">
+					<h2 class="title_card_azul_monitoramento mt-3"><i class="bi bi-plus-circle"></i> &nbsp; PEDIDOS RECENTES</h2>
+					<div>
+						<div class="table_border">
+							<div class="line_divisao_casos case_registro row">
+								<div class="icon_table_monitoramento_vermelho col-md-1">
+									<i class="bi bi-exclamation-triangle-fill"></i>
+								</div>
+								<div class="col-md-7">
+									<p class="case_table_monitoramento mb-0 mt-2"><b>Caso #1287</b></p>
+									<p class="tipo_table_monitoramento mb-0 mt-0">Enchente - Zona Norte</p>
+									<p class="gravidade_table_monitoramento mb-2 mt-0">Gravidade: <b>Alta</b></p>
+								</div>
+								<div class="table_monitoramento col-md-3">
+									<p class="time_table_monitoramento mb-0 mt-0">2 min atrás</p>
+									<p class="p_end mb-0 mt-0"><span class="estado_table_monitoramento_vermelho"><i	class="bi bi-circle circle_vermelho"></i>&nbsp; Crítico</span></p>
+								</div>
+								<div class="seta_table_monitoramento col-md-1">
+									<i class="bi bi-chevron-right"></i>
+								</div>
+							</div>
+							<div class="line_divisao_casos case_registro row">
+								<div class="icon_table_monitoramento_amarelo col-md-1">
+									<i class="bi bi-exclamation-triangle"></i>
+								</div>
+								<div class="col-md-7">
+									<p class="case_table_monitoramento mb-0 mt-2"><b>Caso #1286</b></p>
+									<p class="tipo_table_monitoramento mb-0 mt-0">Deslizamento - Serra</p>
+									<p class="gravidade_table_monitoramento mb-2 mt-0">Gravidade: <b>Moderada</b></p>
+								</div>
+								<div class="table_monitoramento col-md-3">
+									<p class="time_table_monitoramento mb-0 mt-0">5 min atrás</p>
+									<p class="p_end mb-0 mt-0"><span class="estado_table_monitoramento_amarelo"><i class="bi bi-circle circle_amarelo"></i>&nbsp; Moderado</span></p>
+								</div>
+								<div class="seta_table_monitoramento col-md-1">
+									<i class="bi bi-chevron-right"></i>
+								</div>
+							</div>
+							<div class="line_divisao_casos case_registro row">
+								<div class="icon_table_monitoramento_verde col-md-1">
+									<i class="bi bi-triangle"></i>
+								</div>
+								<div class="col-md-7">
+									<p class="case_table_monitoramento mb-0 mt-2"><b>Caso #1285</b></p>
+									<p class="tipo_table_monitoramento mb-0 mt-0">Alagamento - Centro</p>
+									<p class="gravidade_table_monitoramento mb-2 mt-0">Gravidade: <b>Leve</b></p>
+								</div>
+								<div class="table_monitoramento col-md-3">
+									<p class="time_table_monitoramento mb-0 mt-0">8 min atrás</p>
+									<p class="p_end mb-0 mt-0"><span class="estado_table_monitoramento_verde"><i class="bi bi-circle circle_verde"></i>&nbsp; Leve</span></p>
+								</div>
+								<div class="seta_table_monitoramento col-md-1">
+									<i class="bi bi-chevron-right"></i>
+								</div>
+							</div>
+							<div class="case_registro row">
+								<div class="icon_table_monitoramento_vermelho col-md-1">
+									<i class="bi bi-exclamation-triangle-fill"></i>
+								</div>
+								<div class="col-md-7">
+									<p class="case_table_monitoramento mb-0 mt-2"><b>Caso #1284</b></p>
+									<p class="tipo_table_monitoramento mb-0 mt-0">Enchente - Zona Sul</p>
+									<p class="gravidade_table_monitoramento mb-2 mt-0">Gravidade: <b>Alta</b></p>
+								</div>
+								<div class="table_monitoramento col-md-3">
+									<p class="time_table_monitoramento mb-0 mt-0">12 min atrás</p>
+									<p class="p_end mb-0 mt-0"><span class="estado_table_monitoramento_vermelho"><i class="bi bi-circle circle_vermelho"></i>&nbsp; Crítico</span></p>
+								</div>
+								<div class="seta_table_monitoramento col-md-1">
+									<i class="bi bi-chevron-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line_totalizador_monitoramento row mb-4">
+				<div class="card_verde_monitoramento card_espaco col-md-3">
+					<h2 class="title_card_verde_monitoramento">STATUS DO SATÉLITE</h2>
+					<div class="box_card row">
+						<div class="icon_card_verde_monitoramento col-md-3">
+							<i class="bi bi-reception-4 icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="info_card_verde_monitoramento mb-0 mt-0">Conectado</p>
+							<p class="p_card_verde_monitoramento mb-0 mt-0">Sinal forte</p>
+						</div>
+					</div>
+				</div>
+				<div class="card_verde_monitoramento card_espaco col-md-3">
+					<h2 class="title_card_verde_monitoramento">COBERTURA</h2>
+					<div class="box_card row">
+						<div class="icon_card_verde_monitoramento col-md-3">
+							<div class="circle icon_align mt-1" data-value="98"></div>
+						</div>
+						<div class="col-md-9">
+							<p class="info_card_verde_monitoramento mb-0 mt-1">98%</p>
+							<p class="p_card_verde_monitoramento mb-0 mt-0">Área coberta</p>
+						</div>
+					</div>
+				</div>
+				<div class="card_azul_monitoramento card_espaco col-md-3">
+					<h2 class="title_card_azul_monitoramento">CLIMA ATUAL</h2>
+					<div class="box_card row">
+						<div class="icon_card_azul_monitoramento col-md-3">
+							<i class="bi bi-cloud-rain icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="info_card_azul_monitoramento mb-0 mt-0">Chuva Intensa</p>
+							<p class="p_card_azul_monitoramento mb-0 mt-0">Riscos de novos desastres</p>
+						</div>
+					</div>
+				</div>
+				<div class="card_vermelho_monitoramento col-md-3">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="title_card_vermelho_monitoramento">ALERTAS ATIVOS</h2>
+						</div>
+					</div>
+					<div class="box_card row">
+						<div class="icon_card_vermelho_monitoramento col-md-3">
+							<i class="bi bi-exclamation-triangle icon_align"></i>
+						</div>
+						<div class="col-md-9">
+							<p class="info_card_vermelho_monitoramento mb-0 mt-0">3</p>
+							<p class="p_card_vermelho_monitoramento mb-0 mt-0">Alertas climáticos</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>
+		/* Responsável por trocar a cor e texto do botão que aparece no cabeçalho */
 		const iframe = document.querySelector("header iframe");
 		iframe.onload = () => {
 			iframe.contentWindow.postMessage({ color: "transparent" }, "*");
 		};
 	</script>
+	<footer>
+		<p class="p_footer">&#x00A9; &nbsp; 2026 - SATHELP &#x25CF; Conectando vidas quando mais importa &#128225;</p>
+	</footer>
 </body>
 </html>
