@@ -14,4 +14,4 @@ Após enchentes, deslizamentos ou apagões, pessoas ficam sem internet. O SatHel
 - CSS
 
 ## 📌 Status do projeto
-Em desenvolvimento
+Concluído - fase 1
